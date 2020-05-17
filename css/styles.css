@@ -21,13 +21,14 @@ nav>ul {
 
 nav>ul>li {
     display: inline-block;
-    margin: 0;
+    position: relative;
 }
 
 a.navLink {
     display: block;
     text-decoration: none;
     text-align: center;
+    text-transform: capitalize;
     border: 1px solid #3B805B;
     background-color: #47996D;
     color: white;
@@ -37,10 +38,21 @@ a.navLink {
     font-size: 1.5rem;
 }
 
-a.navLink:hover {
+a.navLink:focus {
+    outline: none;
+}
+
+ul.categories {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+nav li:hover > a.navLink {
     background-color: #3B805B;
 }
 
-a.navLink:focus {
-    outline: none;
+li.categoriesShow:hover>ul.categories {
+    display: block;
+
 }
