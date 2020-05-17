@@ -14,12 +14,12 @@ main > p {
     line-height: 1.2em;
 }
 
-nav>ul {
+ul.navigation {
     margin: 30px;
     font-size: 0;
 }
 
-nav>ul>li {
+ul.navigation li {
     display: inline-block;
     position: relative;
 }
@@ -52,7 +52,17 @@ nav li:hover > a.navLink {
     background-color: #3B805B;
 }
 
-li.categoriesShow:hover>ul.categories {
+ul.navigation>li:hover>ul.categories {
     display: block;
+}
 
+ul.categoriesSubmenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+}
+
+ul.categories>li:hover > ul.categoriesSubmenu {
+    display: block;
 }
